@@ -1,4 +1,5 @@
 <template>
+  <v-container>
   <div class="login mt-5">
     <h1 class="text-center">
       Вход в систему
@@ -41,6 +42,7 @@
       </v-card>
     </v-row>
   </div>
+  </v-container>
 </template>
 
 <script lang="ts">

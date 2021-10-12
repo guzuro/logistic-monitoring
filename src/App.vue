@@ -28,10 +28,6 @@ import TheSidebar from '@/components/TheSidebar.vue';
 })
 export default class App extends Vue {
   drawer = false
-
-  mounted():void {
-    console.log(this.$store);
-  }
 }
 </script>
 

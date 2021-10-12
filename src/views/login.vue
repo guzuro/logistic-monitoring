@@ -57,18 +57,18 @@ import { VBtn, VCard, VContainer, VForm, VTextField } from 'vuetify/lib/componen
   },
 })
 export default class Login extends Vue {
-  login = '';
+  login = 'manager';
 
   loginFormRules = [(v: string): boolean | string => !!v || 'Обязательное поле'];
 
-  password = '';
+  password = 'manager';
 
   valid = false;
 
   submit(): void {
     let validData = false;
     let foundUser = null;
-    // TODO аутентификация
+
     this.$store.state.defaultUsers.forEach((df: any) => {
       if (this.login === df.login && this.password === df.password) {
         validData = true;
@@ -83,9 +83,6 @@ export default class Login extends Vue {
     } else {
       this.login = '';
       this.password = '';
-      validData = false;
-      foundUser = null;
-      console.log('wrong input');
     }
   }
 }

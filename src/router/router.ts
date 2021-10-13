@@ -13,7 +13,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   const routeMeta = to.meta;
-  if (to.name !== 'Login') {
+  if (to.name !== 'Login' && to.name !== 'Main') {
     if (routeMeta && routeMeta.authRole && store.getters['userModule/isAuthenticated'] && routeMeta.authRole.includes(store.getters['userModule/getUserRole'])) {
       next();
     } else {
